@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google" value="notranslate">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Scratch">
+<meta name="theme-color" content="#4c97ff">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="shortcut icon" href="static/favicon.ico">
+<title>Scratch Offline</title>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js")
+    .then(() => console.log("Scratch offline service worker installed"))
+    .catch(error => console.error("Offline setup failed:", error));
+}
+</script>
+<script defer="defer" src="gui.js"></script>
+</head>
+<body></body>
+</html>
